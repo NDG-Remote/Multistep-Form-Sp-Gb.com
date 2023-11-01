@@ -9,50 +9,121 @@
   <body>
     <div class="container">
       <form action="/" id="form1">
-        <h3 style="red" id="form-title">
+        <!-- Start Form 1 -->
+        <h3 id="form-title">
           Spanischer Grundbuchauszug bestellen
         </h3>
+        <div>
+          <h4>Adresse der spanischen Immobilie</h4>
+        </div>
         <div class="input-controll">
-          <input id="email" type="text" placeholder="Email" />
+          <input type="text" placeholder="Strasse" />
           <div class="required">
             <p id="input-validation-message">required</p>
           </div>
         </div>
-        <div class="input-controll">
-          <input id="password" type="password" placeholder="Password" />
+        <div class="half input-controll">
+          <input type="text" placeholder="Postleitzahl" />
           <div class="error"></div>
         </div>
-        <div class="input-controll">
+        <div class="half half-right input-controll">
           <input
-            id="passwordconfirmation"
-            type="password"
-            placeholder="Confirm Pasword"
+            type="text"
+            placeholder="Ortschaft"
           />
           <div class="error"></div>
+        </div>
+          <div class="input-controll">
+          <input type="text" placeholder="Name des Eigentümers" />
+          <div class="box-position">
+            <img class="note-image" src="images/note.svg" alt="exclamation">
+            <div class="info-box">Wenn möglich, bitte angeben! <br><br>Die Angabe des vollständigen Namens des Eigentümers erhöht die Erfolgschancen der Bestellung erheblich.</div>
+          </div>
+        </div>
+        <div class="input-controll">
+          <input type="text" placeholder="Zusatzinformationen / Bemerkungen" />
         </div>
         <div class="btn-box">
           <button type="button" id="next1">Next</button>
         </div>
       </form>
-
+<!-- Start Form 2 -->
       <form action="/" id="form2">
         <!-- What has to be written in action??? / or \ or something else?-->
         <h3 id="form-title">Spanischer Grundbuchauszug bestellen</h3>
-        <input type="text" placeholder="Medium" />
-        <input type="text" placeholder="Github" />
-        <input type="text" placeholder="LinkedIn" />
+        <div>
+          <h4>Angaben des Bestellers</h4>
+        </div>
+        <div class="half input-controll">
+          <input type="text" placeholder="Vorname" />
+          <div class="error"></div>
+        </div>
+        <div class="half half-right input-controll">
+          <input
+            type="text"
+            placeholder="Nachname"
+          />
+          <div class="error"></div>
+        </div>
+          <div class="input-controll">
+            <input type="email" placeholder="E-mail" />
+<!--           <div class="box-position">
+            <img class="note-image" src="images/note.svg" alt="exclamation">
+            <div class="info-box">Wenn möglich, bitte angeben! <br><br>Die Angabe des vollständigen Namens des Eigentümers erhöht die Erfolgschancen der Bestellung erheblich.</div>
+          </div> -->
+        </div>
+        <div class="input-controll">
+          <input type="tel" placeholder="Telefonnummer" />
+        </div>
+        <div class="input-controll">
+          <input type="text" placeholder="Rechnungsadresse /-vermerke" />
+        </div>
+          <div class="input-controll">
+            <input type="text" placeholder="Ausweisnummer oder spanische NIE" />
+          <div id="box-position2">
+              <img id="note-image2" src="images/note.svg" alt="exclamation">
+              <div class="info-box">Das spanische Grundbuch ist für jedermann/-frau öffentlich und zugänglich. Die einzige Bedingung ist, dass man sich mit einer Identitätsnummer und dem vollständigen Namen ausweist.</div>
+            </div>
+          </div>
         <div class="btn-box">
           <button type="button" id="back1">Back</button>
           <button type="button" id="next2">Next</button>
         </div>
       </form>
-
+<!-- Start Form 3 -->
       <form action="/" id="form3">
         <!-- What has to be written in action??? / or \ or something else?-->
         <h3 id="form-title">Spanischer Grundbuchauszug bestellen</h3>
-        <input type="text" placeholder="First Name" />
-        <input type="text" placeholder="Last Name" />
-        <input type="text" placeholder="Mobile Number" />
+        <div>
+          <h4>Adresse der spanischen Immobilie</h4>
+        </div>
+        <div class="input-controll">
+          <input type="text" placeholder="Strasse" />
+          <div class="required">
+            <p id="input-validation-message">required</p>
+          </div>
+        </div>
+        <div class="half input-controll">
+          <input type="text" placeholder="Postleitzahl" />
+          <div class="error"></div>
+        </div>
+        <div class="half half-right input-controll">
+          <input
+            type="text"
+            placeholder="Ortschaft"
+          />
+          <div class="error"></div>
+        </div>
+          <div class="input-controll">
+          <input type="text" placeholder="Name des Eigentümers" />
+          <div class="box-position">
+            <img class="note-image" src="images/note.svg" alt="exclamation">
+            <div class="info-box">Wenn möglich, bitte angeben! <br><br>Die Angabe des vollständigen Namens des Eigentümers erhöht die Erfolgschancen der Bestellung erheblich.</div>
+          </div>
+        </div>
+        <div class="input-controll">
+          <input type="text" placeholder="Zusatzinformationen / Bemerkungen" />
+        </div>
         <div class="btn-box">
           <button type="button" id="back2">Back</button>
           <button type="button">Sumbit</button>
@@ -60,9 +131,9 @@
       </form>
       <div class="step-row">
         <div id="progress"></div>
-        <div class="step-col"><small>Step 1</small></div>
-        <div class="step-col"><small>Step 2</small></div>
-        <div class="step-col"><small>Step 3</small></div>
+        <div class="step-col"><small>Schritt 1</small></div>
+        <div class="step-col"><small>Schritt 2</small></div>
+        <div class="step-col"><small>Schritt 3</small></div>
       </div>
     </div>
     <script src="script.js"></script>

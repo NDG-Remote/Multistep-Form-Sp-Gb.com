@@ -49,14 +49,14 @@ var h3 = document.getElementsByClassName("h3");
 });
 */
 
-email.oninput = function () {
+/* email.oninput = function () {
   inputValidationMessage.style.color = "green";
   inputValidationMessage.innerText = "Thank you!";
 };
 
 email.oninput = function () {
   h3.innerText = email.value;
-};
+}; */
 
 /* let setError = (field, string) => {
     field.innerHTML = string
@@ -78,3 +78,22 @@ const validateInputs = () => {
 };
 
 email.oninput.validateInputs(); */
+
+
+/* Exclamation Mark hover function */
+var noteImages = document.querySelectorAll(".note-image, #note-image2");
+
+noteImages.forEach(function (image) {
+  image.addEventListener("mouseover", showInfoBox);
+  image.addEventListener("mouseout", hideInfoBox);
+});
+
+function showInfoBox(event) {
+  var infoBox = event.target.parentElement.querySelector(".info-box");
+  infoBox.style.display = "block";
+}
+
+function hideInfoBox(event) {
+  var infoBox = event.target.parentElement.querySelector(".info-box");
+  infoBox.style.display = "none";
+}
