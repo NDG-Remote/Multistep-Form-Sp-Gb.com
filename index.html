@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="container">
-      <form action="/" id="form1">
+      <form action="https://formsubmit.co/andrea.glaus.realestate@gmail.com" method="POST" id="form1">
         <!-- Start Form 1 -->
         <h3 id="form-title">
           Spanischer Grundbuchauszug bestellen
@@ -17,34 +17,31 @@
           <h4>Adresse der spanischen Immobilie</h4>
         </div>
         <div class="input-controll">
-          <input type="text" placeholder="Strasse" />
+          <input name="Strasse" type="text" placeholder="Strasse" required/>
           <div class="required">
-            <p id="input-validation-message">required</p>
+            <p id="input-validation-message"></p>
           </div>
         </div>
         <div class="half input-controll">
-          <input type="text" placeholder="Postleitzahl" />
+          <input name="Postleitzahl" type="text" placeholder="Postleitzahl" />
           <div class="error"></div>
         </div>
         <div class="half half-right input-controll">
-          <input
-            type="text"
-            placeholder="Ortschaft"
-          />
+          <input name="Ortschaft" type="text" placeholder="Ortschaft"/>
           <div class="error"></div>
         </div>
           <div class="input-controll">
-          <input type="text" placeholder="Name des Eigentümers" />
-          <div class="box-position">
-            <img class="note-image" src="images/note.svg" alt="exclamation">
+          <input name="Eigentümer" type="text" placeholder="Name des Eigentümers" />
+          <div id="box-position1">
+            <img id="note-image1" src="images/note.svg" alt="exclamation">
             <div class="info-box">Wenn möglich, bitte angeben! <br><br>Die Angabe des vollständigen Namens des Eigentümers erhöht die Erfolgschancen der Bestellung erheblich.</div>
           </div>
         </div>
         <div class="input-controll">
-          <input type="text" placeholder="Zusatzinformationen / Bemerkungen" />
+          <input name="Bemerkungen" type="text" placeholder="Zusatzinformationen / Bemerkungen" />
         </div>
         <div class="btn-box">
-          <button type="button" id="next1">Next</button>
+          <button type="button" id="next1">Weiter</button>
         </div>
       </form>
 <!-- Start Form 2 -->
@@ -55,39 +52,32 @@
           <h4>Angaben des Bestellers</h4>
         </div>
         <div class="half input-controll">
-          <input type="text" placeholder="Vorname" />
+          <input name="Vorname" type="text" placeholder="Vorname" />
           <div class="error"></div>
         </div>
         <div class="half half-right input-controll">
-          <input
-            type="text"
-            placeholder="Nachname"
-          />
+          <input name="Nachname" type="text" placeholder="Nachname"/>
           <div class="error"></div>
         </div>
           <div class="input-controll">
-            <input type="email" placeholder="E-mail" />
-<!--           <div class="box-position">
-            <img class="note-image" src="images/note.svg" alt="exclamation">
-            <div class="info-box">Wenn möglich, bitte angeben! <br><br>Die Angabe des vollständigen Namens des Eigentümers erhöht die Erfolgschancen der Bestellung erheblich.</div>
-          </div> -->
+            <input name="E-mail" type="email" placeholder="E-mail" />
         </div>
         <div class="input-controll">
-          <input type="tel" placeholder="Telefonnummer" />
-        </div>
-        <div class="input-controll">
-          <input type="text" placeholder="Rechnungsadresse /-vermerke" />
+          <input name="Telefonnummer" type="tel" placeholder="Telefonnummer" />
         </div>
           <div class="input-controll">
-            <input type="text" placeholder="Ausweisnummer oder spanische NIE" />
+            <input name="Ausweisnummer" type="text" placeholder="Ausweisnummer oder spanische NIE" />
           <div id="box-position2">
               <img id="note-image2" src="images/note.svg" alt="exclamation">
-              <div class="info-box">Das spanische Grundbuch ist für jedermann/-frau öffentlich und zugänglich. Die einzige Bedingung ist, dass man sich mit einer Identitätsnummer und dem vollständigen Namen ausweist.</div>
+              <div class="info-box">Das spanische Grundbuch ist für jedermann/-frau öffentlich und frei zugänglich. Die einzige Bedingung ist, dass man sich mit einer Ausweisnummer und dem vollständigen Namen ausweist.</div>
             </div>
           </div>
+        <div class="input-controll">
+            <input name="Rechnungsvermerke" type="text" placeholder="Bemerkungen / Rechnungsvermerke" />
+        </div>
         <div class="btn-box">
-          <button type="button" id="back1">Back</button>
-          <button type="button" id="next2">Next</button>
+          <button type="button" id="back1">Zurück</button>
+          <button type="button" id="next2">Weiter</button>
         </div>
       </form>
 <!-- Start Form 3 -->
@@ -95,38 +85,36 @@
         <!-- What has to be written in action??? / or \ or something else?-->
         <h3 id="form-title">Spanischer Grundbuchauszug bestellen</h3>
         <div>
-          <h4>Adresse der spanischen Immobilie</h4>
+          <h4>Bezahlung</h4>
         </div>
-        <div class="input-controll">
-          <input type="text" placeholder="Strasse" />
-          <div class="required">
-            <p id="input-validation-message">required</p>
+        <div>
+          <input name="Check-Grundbuchauszug" type="checkbox" id="grundbuchauszug" name="grundbuchauszug" value="49.9">
+          <label class="label-font" for="grundbuchauszug">49.90€ - Grundbuchauszug</label><br>
+          <input name="Check-Katasterplan" type="checkbox" id="katasterplan" name="katasterplan" value="9.9">
+          <label class="label-font" for="katasterplan" id="katasterplan-text">9.90€ - Katasterplan</label><br>
+          <input name="Check-Inhaltslegende-DE" type="checkbox" id="inhaltslegende-deutsch" name="inhaltslegende-deutsch" value="59.9">
+          <label class="label-font" for="inhaltslegende-deutsch">59.90€ - Inhaltslegende Deutsch</label><br>
+          <input name="Check-Uebersetzung-EN" type="checkbox" id="uebersetzung-englisch" name="uebersetzung-englisch" value="79.9">
+          <label class="label-font" for="uebersetzung-englisch">79.90€ - Übersetzung Englisch</label><br>
+        </div>
+        <div class="label-font total-font">
+          <label class="total label-font">Total: <p class="total" id="total"></p> EUR</label>
+        </div>
+        <div>
+          <input name="Zahlungsart-Kreditkarte" type="radio" id="kreditkarte" name="zahlungsart" value="kreditkarte">
+          <label class="label-font" for="kreditkarte">Kreditkarte</label><br>
+          <input name="Zahlungsart-Paypal" type="radio" id="paypal" name="zahlungsart" value="paypal">
+          <label class="label-font" id="paypal">Paypal</label><br>
+        </div>
+                <div>
+          <input name="AGB-Datenschutz-Akzeptiert" type="checkbox" id="agb" name="agb" value="agb">
+          <div class="agb-text ">
+          <label class="label-font" id="agb" for="agb"> Ich akzeptiere die <a href="https://www.spanien-grundbuchauszug.com/agbs/">allgemeinen Geschäftsbedingungen</a> und die <a href="https://www.spanien-grundbuchauszug.com/agbs/">Datenschutzbestimmungen</a>.</label><br>
           </div>
-        </div>
-        <div class="half input-controll">
-          <input type="text" placeholder="Postleitzahl" />
-          <div class="error"></div>
-        </div>
-        <div class="half half-right input-controll">
-          <input
-            type="text"
-            placeholder="Ortschaft"
-          />
-          <div class="error"></div>
-        </div>
-          <div class="input-controll">
-          <input type="text" placeholder="Name des Eigentümers" />
-          <div class="box-position">
-            <img class="note-image" src="images/note.svg" alt="exclamation">
-            <div class="info-box">Wenn möglich, bitte angeben! <br><br>Die Angabe des vollständigen Namens des Eigentümers erhöht die Erfolgschancen der Bestellung erheblich.</div>
-          </div>
-        </div>
-        <div class="input-controll">
-          <input type="text" placeholder="Zusatzinformationen / Bemerkungen" />
         </div>
         <div class="btn-box">
-          <button type="button" id="back2">Back</button>
-          <button type="button">Sumbit</button>
+          <button type="button" id="back2">Zurück</button>
+          <button type="submit">Bestellen</button>
         </div>
       </form>
       <div class="step-row">

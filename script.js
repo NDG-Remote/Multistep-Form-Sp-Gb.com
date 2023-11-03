@@ -81,7 +81,7 @@ email.oninput.validateInputs(); */
 
 
 /* Exclamation Mark hover function */
-var noteImages = document.querySelectorAll(".note-image, #note-image2");
+var noteImages = document.querySelectorAll("#note-image1, #note-image2");
 
 noteImages.forEach(function (image) {
   image.addEventListener("mouseover", showInfoBox);
@@ -97,3 +97,49 @@ function hideInfoBox(event) {
   var infoBox = event.target.parentElement.querySelector(".info-box");
   infoBox.style.display = "none";
 }
+
+
+/* Calculate Total of orders */
+let totalParagraph = document.getElementById("total");
+
+/* Get checkboxes */
+let checkboxGb = document.getElementById("grundbuchauszug");
+let checkboxKp = document.getElementById("katasterplan");
+let checkboxId = document.getElementById("inhaltslegende-deutsch");
+let checkboxUe = document.getElementById("uebersetzung-englisch");
+
+/* Calculate total */
+
+checkboxGb.addEventListener("click", updateTotal);
+checkboxKp.addEventListener("click", updateTotal);
+checkboxId.addEventListener("click", updateTotal);
+checkboxUe.addEventListener("click", updateTotal);
+
+/* Initialize total */
+let total = 0;
+
+/* Function to update the total when a checkbox is clicked */
+function updateTotal() {
+  total = 0; // Reset the total
+  
+  if (checkboxGb.checked) {
+    total += parseFloat(checkboxGb.value);
+  }
+  
+  if (checkboxKp.checked) {
+    total += parseFloat(checkboxKp.value);
+  }
+  
+  if (checkboxId.checked) {
+    total += parseFloat(checkboxId.value);
+  }
+  
+  if (checkboxUe.checked) {
+    total += parseFloat(checkboxUe.value);
+  }
+  
+  totalParagraph.innerText = total.toFixed(2); // Display the total with two decimal places
+}
+
+/* Initialize the total display */
+updateTotal();
