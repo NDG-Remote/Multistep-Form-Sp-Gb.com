@@ -9,7 +9,7 @@ body {
 .container {
   width: 360px;
   height: 600px;
-  margin: 8% auto;
+  margin: auto;
   background: #fff;
   border-radius: 5px;
   position: relative;
@@ -25,7 +25,7 @@ h4 {
   font-size: 15px;
   margin-bottom: 10px;
   padding: 10px 0px;
-  margin: 5px;
+  margin: 5px 5px 5px 0px;
   color: #777;
 }
 .container form {
@@ -39,8 +39,8 @@ h4 {
   margin-top: 30px;
 }
 input{
-  padding: 10px 5px;
-  margin: 5px;
+  padding: 10px 0px;
+  margin: 5px 5px 5px 0px;
 } 
 
 .label-font {
@@ -108,18 +108,18 @@ input{
 }
 /* Exclamation Mark for hover */
 #box-position1 {
-  position: absolute;
-  left: -8px;
-  top: 248px;
+  position: relative;
+  left: -17px;
+  bottom: 30px;
 }
 #note-image1 {
   width: 15px;
   filter: invert(32%) sepia(71%) saturate(1025%) hue-rotate(145deg) brightness(102%) contrast(98%);
 }
 #box-position2 {
-  position: absolute;
-  left: -8px;
-  top: 298px;
+  position: relative;
+  left: -17px;
+  bottom: 32px;
 }
 #note-image2 {
   width: 15px;
